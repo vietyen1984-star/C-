@@ -1,0 +1,12 @@
+#include <iostream>
+using namespace std;
+
+int main() 
+{
+    int sl;
+    double dg,tong;
+   cin>>sl>>dg;
+   tong=sl*dg;
+   cout<<tong;
+    return 0;
+}

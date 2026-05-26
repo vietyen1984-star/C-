@@ -1,0 +1,13 @@
+Nhập 2 số nguyên a và b. In ra chữ số hàng đơn vị của tích a * b.
+#include <iostream>
+using namespace std;
+
+int main() 
+{
+    int a,b,dv;
+   cin>>a>>b;
+   dv=a*b%10;
+    cout<<dv;
+    
+    return 0;
+}

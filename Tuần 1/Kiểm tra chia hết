@@ -1,0 +1,12 @@
+ Nhập số nguyên n, kiểm tra xem n có chia hết cho 3 không. In ra 1 nếu có, 0 nếu không.
+#include <iostream>
+using namespace std;
+
+int main() 
+{
+    int n;
+   cin>>n;
+    cout<<(n%3==0);
+    
+    return 0;
+}

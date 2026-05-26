@@ -1,0 +1,16 @@
+//Tính tiền taxi 🚕
+//Một hãng taxi tính cước như sau:2 km đầu: 10,000 đồng/km,Từ km thứ 3 trở đi: 7,000 đồng/km
+#include <iostream>
+using namespace std;
+
+int main() 
+{
+    int a,t;
+   cin>>a;
+   if(a<=2)
+   t=a*10000;
+   else
+   t=2*10000+(a-2)*7000;//-2 vì theo đề ra 2 km đầu được tính giá 10000
+    cout<<t;
+    
+    return 0;

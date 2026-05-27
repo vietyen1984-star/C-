@@ -1,0 +1,19 @@
+//Nhập điểm (0–10), in ra học lực: 9–10 → Xuat sac,7–8 → Gioi,5–6 → Trung binh,Dưới 5 → Yeu
+#include <iostream>
+using namespace std;
+
+int main() 
+{
+    int a;
+   cin>>a;
+   if(a<5)
+   cout<<"yeu";
+   else if(a<=6)
+   cout<<"trung binh";
+   else if(a<=8)
+   cout<<"gioi";
+   else
+    cout<<"xuat sac";
+    
+    return 0;
+}

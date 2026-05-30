@@ -1,0 +1,17 @@
+//C3
+#include <iostream>
+using namespace std;
+
+int main() 
+{
+   int n,sum=0;
+   cin>>n;
+   sum++;
+   while(n!=42){
+     cin>>n;
+     sum=sum+1;
+    
+   }
+   cout<<"dung roi"<<" "<<sum;
+    return 0;
+}

@@ -1,0 +1,36 @@
+//Máy có 1 số bí mật là 42. Người dùng nhập đến khi đoán đúng thì in ra Dung roi! và số lần đã đoán.
+//C1
+#include <iostream>
+using namespace std;
+
+int main() 
+{
+   int n,sum=1;
+   cin>>n;
+   while(n!=42){
+     cin>>n;
+     sum=sum+1;
+    
+   }
+   cout<<"dung roi"<<" "<<sum;
+    return 0;
+}
+//C2
+#include <iostream>
+using namespace std;
+
+int main() 
+{
+  int n,sum=1;
+  cin>>n;
+  while(n<42){
+    cin>>n;
+    sum=sum+1;
+  }
+  while(n>42){
+    cin>>n;
+    sum=sum+1;
+  }
+  cout<<"dung roi"<<" "<<sum;
+    return 0;
+}

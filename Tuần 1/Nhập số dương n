@@ -1,0 +1,14 @@
+//Nhập số nguyên dương n. Nếu người dùng nhập số âm hoặc 0 thì yêu cầu nhập lại cho đến khi đúng, rồi in ra n * 2
+#include <iostream>
+using namespace std;
+
+int main() 
+{
+    int n;
+    cin>>n;
+    while(n<=0){
+      cin>>n;
+    }
+    cout<<n*2;
+    return 0;
+}

@@ -1,0 +1,19 @@
+//Nhập n, kiểm tra xem n có phải số đối xứng không. Số đối xứng là số đọc xuôi và đọc ngược giống nhau.
+#include <iostream>
+using namespace std;
+int main() 
+{
+  int n,nguoc=0,goc;
+  cin>>n;
+  goc=n;
+  while(n!=0){
+  nguoc=n*10+(n%10);
+  n=n/10;
+  }
+  if(goc==nguoc)
+  cout<<"doi xung";
+  else
+  cout<<"ko doi xung";
+
+    return 0;
+}

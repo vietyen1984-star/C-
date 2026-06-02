@@ -1,0 +1,12 @@
+//Cho trước chữ cái x và số nguyên n. Hãy in chữ cái đó n lần.
+#include <iostream>
+using namespace std;
+
+int main() 
+{
+   int n;
+   cin>>n;
+   for(int i=1;i<=n;i++)
+   cout<<"B";
+    return 0;
+}

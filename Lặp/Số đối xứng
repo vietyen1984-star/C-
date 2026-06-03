@@ -1,0 +1,19 @@
+//Số nguyên n gọi là sốđối xứng nếu đọc từ trái qua phải, hay từ phải qua trái đều được số giống nhau.
+#include <iostream>
+using namespace std;
+
+int main() 
+{
+  int n,nguoc=0;
+  cin>>n;
+  int goc=n;
+  while(n!=0){
+ nguoc=n*10+n%10;
+ n=n/10;
+  }
+  if(goc==nguoc)
+  cout<<"YES";
+  else
+  cout<<"NO";
+    return 0;
+}

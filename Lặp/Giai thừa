@@ -1,0 +1,13 @@
+//Cho số nguyên dương N. In ra tích các số từ 1 đến N (tích này trong toán học gọi là giai thừa của N ký hiệu toán học là N!)
+#include <iostream>
+using namespace std;
+
+int main() 
+{
+  int n,tich=1;
+  cin>>n;
+  for(int i=1;i<=n;i++)
+  tich=tich*i;
+  cout<<tich;
+    return 0;
+}

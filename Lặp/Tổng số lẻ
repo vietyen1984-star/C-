@@ -1,0 +1,14 @@
+//Cho số nguyên dương n. Em hãy tính tổng các số nguyên dương lẻ nhỏ hơn hoặc bằng n.
+#include <iostream>
+using namespace std;
+
+int main() 
+{
+   int n,sum=0;
+   cin>>n;
+   for(int i=1;i<=n;i++)
+   if(i%2!=0)
+   sum=sum+i;
+   cout<<sum;
+    return 0;
+}

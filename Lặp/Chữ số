@@ -1,0 +1,16 @@
+//Cho số tự nhiên N. Đếm và tính tổng các chữ số của N.
+#include <iostream>
+using namespace std;
+
+int main() 
+{
+   int n,sum=0,tong=0;
+   cin>>n;
+   while(n!=0){
+     sum=sum+n%10;
+     n=n/10;
+     tong++;
+   }
+   cout<<tong<<" "<<sum;
+    return 0;
+}

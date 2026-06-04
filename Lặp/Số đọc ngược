@@ -1,0 +1,22 @@
+//Cuối cùng yêu cầu của Tý là: cho hai số nguyên dương a, b (1 ≤ a, b ≤ 109), đưa ra số có giá trị lớn hơn khi đọc 2 số này theo quy tắc mới.
+#include <iostream>
+using namespace std;
+
+int main() 
+{
+  int a,b,sum=0,tong=0;
+  cin>>a>>b;
+  while(a!=0){
+    sum=sum*10+a%10;
+    a=a/10;
+  }
+  while(b!=0){
+    tong=tong*10+b%10;
+    b=b/10;
+  }
+  if(sum>tong)
+  cout<<sum;
+  else
+  cout<<tong;
+    return 0;
+}

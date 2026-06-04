@@ -1,0 +1,14 @@
+//Hôm nay, cô giáo vừa dạy cho Tý về số phong phú. Số N được gọi là số phong phú nếu như N nhỏ hơn tổng các ước của nó (không kể chính nó).
+#include <iostream>
+using namespace std;
+
+int main() 
+{
+    int n,sum=0;
+    cin>>n;
+    for(int i=1;i<n;i++)
+    if(n%i==0)
+    sum=sum+i;
+    cout<<(sum>n);
+    return 0;
+}

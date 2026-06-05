@@ -1,0 +1,13 @@
+//Cho 2 số nguyên dương x và n. Hãy tính lũy thừa bậc n của x, tức là tính x^n.
+#include <iostream>
+using namespace std;
+
+int main() 
+{
+   int a,b,tong=1;
+   cin>>a>>b;
+   for(int i=1;i<=b;i++)
+   tong=tong*a;
+   cout<<tong;
+    return 0;
+}

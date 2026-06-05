@@ -1,0 +1,18 @@
+//Yêu cầu: cho số nguyên n, hãy vẽ bàn cờ vua kích thước n x n. Biết rằng ô đầu tiên ở góc trên bên trái là ô trắng.
+#include <iostream>
+using namespace std;
+
+int main() 
+{
+   int n;
+   cin>>n;
+   for(int i=1;i<=n;i++){
+    for(int j=1;j<=n;j++)
+    if((i+j)%2==0)
+    cout<<"w"<<" ";
+    else
+    cout<<"b"<<" ";
+    cout<<endl;
+   }
+    return 0;
+}

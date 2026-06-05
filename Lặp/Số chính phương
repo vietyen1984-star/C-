@@ -1,0 +1,17 @@
+//Nhập một số nguyên dương N. Đếm và tìm tất cả các số chính phương nhỏ hơn hoặc bằng N.
+#include <iostream>
+using namespace std;
+
+int main() 
+{
+  int n,sum=0;
+  cin>>n;
+  for(int i=1;i<=n;i++){
+  if(i*i<=n){
+  sum++;
+  cout<<i*i<<" ";}
+  }
+  cout<<endl;
+  cout<<sum;
+    return 0;
+}

@@ -1,0 +1,17 @@
+//Anh Bo có một số tiền là n đồng. Anh định đem n đồng này gửi ngân hàng với lãi suất 10% một năm. Cứ sau mỗi năm anh sẽ ra ngân hàng rút tiền lãi rồi nhập chung với tiền gốc để gửi lại cho năm sau. Anh dự định khi nào đủ số tiền m đồng thì sẽ rút toàn bộ để đi mua bò. Hỏi sau mấy năm thì anh Bo sẽ có đủ tiền mua bò?
+#include <iostream>
+using namespace std;
+
+int main() 
+{
+  double n;
+  int m,sum=0,nam=0;
+  cin>>n>>m;
+  while(n<m){
+  sum=n*110/100; //n=n*110/100||=n+n/100*10
+  n=sum;         //có thể không cần viết n=sum
+  nam=nam+1;
+  }
+   cout<<nam;
+    return 0;
+}

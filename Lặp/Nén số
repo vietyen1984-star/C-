@@ -1,0 +1,24 @@
+//Ta gọi phép nén một số nguyên là tính tổng các chữ số của nó. Dễ thấy, sau một số phép nén, thì số còn lại chỉ có một chữ số và ko nén được nữa. Ta gọi số đó là số nén tối giản.
+#include <iostream>
+using namespace std;
+
+int main() 
+{
+    int n,sum=0;
+    cin>>n;
+    while(n!=0){
+     sum=sum+n%10;
+     n=n/10;
+    }
+    while(sum>=10){
+        n=sum;
+        sum=0+n%10;
+        n=n/10;
+    while(n!=0){
+        sum=sum+n%10;
+        n=n/10;
+        }
+    }
+    cout<<sum;
+    return 0;
+}

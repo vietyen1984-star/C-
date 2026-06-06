@@ -1,0 +1,17 @@
+//Xét một số N nguyên dương, Ví dụ: N = 836, xét tổng M = 836 + 8 + 3 +6 = 853, khi đó ta gọi số N = 836 là số nguồn của số M = 853. Có những số có thể có nhiều nguồn, ví dụ số: M = 909 có hai số nguồn là 891 và 900
+#include <iostream>
+using namespace std;
+
+int main() 
+{
+    int n;
+    cin>>n;
+    int sum=n;
+    while(n!=0){
+        sum=sum+n%10;
+        n=n/10;
+    }
+    cout<<sum;
+    
+    return 0;
+}

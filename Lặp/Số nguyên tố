@@ -1,0 +1,18 @@
+//Cho số nguyên dương N (N <= 2 tỷ). Hãy kiểm tra xem số N có phải là số nguyên tố không? Số nguyên tố là số tự nhiên có duy nhất hai ước là 1 và chính nó. 
+#include <iostream>
+using namespace std;
+
+int main() 
+{
+    int n,sum=0;
+    cin>>n;
+    for(int i=1;i<=n;i++)
+    if(n%i==0){
+    sum=sum+1;
+    }
+    if(sum==2)
+    cout<<"YES";
+    else
+    cout<<"NO";
+    return 0;
+}

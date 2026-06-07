@@ -1,0 +1,18 @@
+//Nhập một số nguyên dương N. Đếm và hiện ra màn hình các số nhỏ hơn hoặc bằng N là số chẵn và chia hết cho 3.
+#include <iostream>
+using namespace std;
+
+int main() 
+{
+    int n,sum=0;
+    cin>>n;
+    for(int i=1;i<=n;i++)
+    if(i%2==0&&i%3==0){
+        sum=sum+1;
+        cout<<i<<" ";
+    }
+     cout<<endl;
+     cout<<sum;
+
+    return 0;
+}

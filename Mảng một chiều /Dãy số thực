@@ -1,0 +1,27 @@
+//Nhập vào dãy n số thực. 
+//Sau đó: -	tính tổng dãy, -	tổng các số âm, -	tổng các số dương, -	tổng các số ở vị trí chẵn, -	tổng các số ở vị trí lẻ.
+#include <iostream>
+using namespace std;
+
+int main() 
+{
+  int n;
+  cin>>n;
+  int a[n];
+  for(int i=0;i<n;i++)
+  cin>>a[i];
+  int sum=0,td=0,ta=0,tc=0,tl=0;
+  for(int i=0;i<n;i++){
+  sum=sum+a[i];
+  if(a[i]>0)
+  td=td+a[i];
+  if(a[i]<0)
+  ta=ta+a[i];
+  if(a[i]%2==0)
+  tc=tc+a[i];
+  if(a[i]%2!=0)
+  tl=tl+a[i];
+  }
+  cout<<sum<<" "<<td<<" "<<ta<<" "<<tc<<" "<<tl;
+    return 0;
+}

@@ -1,0 +1,25 @@
+//Cho dãy số gồm N phần tử nguyên A1, A2, ..., AN (1 <= n <= 103) và số nguyên X. Hãy đếm cặp số (có thể không liên tiếp) có tổng bằng X.
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() 
+{
+    int n;
+    cin>>n;
+    int x;
+    cin>>x;
+    int sum=0,dem=0;
+    vector <int> a;
+    a.resize(n);
+    for(int i=0;i<n;i++)
+    cin>>a[i];
+    for(int i=0;i<n;i++){
+        for(int j=0;j<i;j++){
+        sum=a[i]+a[j];
+        if(sum==x)
+        dem++;
+        }
+    }
+       cout<<dem;
+    return 0;
+}

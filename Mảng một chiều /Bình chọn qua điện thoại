@@ -1,0 +1,28 @@
+//Trong vòng chung kết cuộc thi “Vietnam Next Top Model” trên VTV3 các thí sinh được đánh số báo danh là một số nguyên dương có giá trị không vượt quá 1000. Khán giả xem truyền hình có thể bình chọn cho thí sinh mình yêu thích bằng cách nhắn tin qua điện thoại di động.
+//Ban tổ chức nhận được tin nhắn hợp lệ của N khán giả (các khán giả được đánh số từ 1 đến N), khán giả thứ i bình chọn cho thí sinh mang số báo danh ai.
+//Hãy liệt kê số báo danh của những thí sinh được nhiều khán giả bình chọn nhất theo thứ tự tăng dần.
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() 
+{
+    int n,dem=0;
+    cin>>n;
+    vector<int> vec;
+    vec.resize(1000);
+    int ans=vec[0];
+    for(int i=0;i<n;i++) {
+        int x;
+        cin>>x;
+        vec[x]++;
+    }
+    
+    for(int i=0;i<1000;i++) {
+        if(ans<vec[i]) ans=vec[i]; 
+    }
+    for(int i=0;i<1000;i++){
+        if(vec[i]==ans)
+        cout<<i<<" ";
+    }
+    return 0;
+}

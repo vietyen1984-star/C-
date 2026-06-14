@@ -1,0 +1,29 @@
+//Cho tập hợp A gồm n phần tử là a1, a2, …, an, và tập hợp B gồm m phần tử là b1, b2, …, bm.
+//Nhiệm vụ của bạn là hãy tìm số lượng của 2 tập hợp:
+//-	Tập hợp thứ nhất là hợp của hai tập hợp A và B
+//-	Tập hợp thứ hai là giao của hai tập hợp A và B
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() 
+{
+    int n,m,sum=0,dem=0;
+    cin>>n>>m;
+    vector <int> a;
+    a.resize(n);
+    vector <int> o;
+    o.resize(m);
+    for(int i=0;i<n;i++)
+    cin>>a[i];
+    for(int i=0;i<m;i++)
+    cin>>o[i];
+    for(int i=0;i<n;i++){
+        for(int j=0;j<m;j++)
+        if(a[i]==o[j])
+        sum=sum+1;
+        dem=n+m-sum;
+     }
+        cout<<dem<<" "<<sum;
+
+    return 0;
+}

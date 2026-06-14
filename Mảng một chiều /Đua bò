@@ -1,0 +1,21 @@
+//Bác Ba Phi quyết định sẽ chọn một cặp bò có sức khỏe bằng nhau để tham gia cuộc thi. Bác đang phân vân là sẽ có bao nhiêu cặp bò để cho mình lựa chọn.
+//Bạn hãy lập trình giúp bác Ba Phi đếm xem có bao nhiêu cặp bò có sức khỏe bằng nhau trong số n con bò của bác ấy.
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() 
+{
+    int n,sum=0;
+    cin>>n;
+    vector <int> a;
+    a.resize(n);
+    for(int i=0;i<n;i++)
+    cin>>a[i];
+    for(int i=0;i<n;i++){
+      for(int j=0;j<i;j++)
+        if(a[i]==a[j])
+        sum=sum+1;
+    }
+    cout << sum;
+    return 0;
+}

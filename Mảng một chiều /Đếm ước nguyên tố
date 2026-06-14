@@ -1,0 +1,35 @@
+//Cho hai số nguyên dương M và N (1 ≤ M ≤ N ≤ 60000) và số S được xác định bằng công thức sau: S = n!/(m!(n−m)!).
+#include <bits/stdc++.h>
+using namespace std;
+bool check(int x){
+    if(x<2)
+    return false;
+    for(int i=2;i<x;i++){
+    if(x%i==0)
+    return false;
+    }
+    return true;
+}
+int main() 
+{
+    int n,m;
+    int dem=0;
+    cin>>n>>m;
+    int a=1,b=1,c=1,s=0;
+    for(int i=1;i<=n;i++){
+        a=a*i;
+    }
+    for(int j=1;j<=m;j++){
+        b=b*j;
+    }
+    for(int f=1;f<=(n-m);f++){
+        c=c*f;
+    }
+    s=a/(b*c);
+    for(int k=1;k<=s;k++){
+    if(s%k==0&&check(k)==true)
+    dem++;
+    }
+    cout<<dem;
+    return 0;
+}

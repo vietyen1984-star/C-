@@ -1,0 +1,29 @@
+//Cho một dãy số gồm n phần tử A1, A2, …, An. 
+Hãy đếm số lượng bộ ba số trong n số, sao cho ba số đó tạo thành ba cạnh một tam giác, đồng thời tìm chu vi lớn nhất của một trong các tam giác đó.
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() 
+{
+   
+   int n,sum=0,dem=0,ans=0;
+   cin>>n;
+   vector<int> a;
+   a.resize(n);
+   for(int i=0;i<n;i++)
+   cin>>a[i];
+   for(int i=0;i<n-2;i++){
+    for(int j=i+1;j<n-1;j++){
+        for(int f=j+1;f<n;f++){
+        if((a[i]+a[j])>a[f]&&(a[i]+a[f])>a[j]&&(a[j]+a[f])>a[i]){
+        dem++;
+        sum=a[i]+a[j]+a[f];
+        }
+          if(sum>ans) ans=sum;
+        }
+    }
+   }
+   if(sum>ans) ans=sum;
+   cout<<dem<<" "<<ans;
+    return 0;
+}

@@ -1,0 +1,47 @@
+//Trong khi câu hỏi quen thuộc về "tại sao con gà thích chạy qua đường?" (và do đó hay bị xe cán) đã được nghiên cứu đầy đủ bởi các mọt sách thì rất ngạc nhiên là chỉ một lượng ít nghiên cứu về đề tài tương tự là "những con bò cũng thích chạy ngang đường". Bác nông dân John, do nhận thấy rõ tầm quan trọng của vấn đề này, rất háo hức khi bác được trường đại học hỏi sự trợ giúp của bác để nghiên cứu về đề tài "tại sao bò cũng thích chạy ngang đường?". Bác mặc dù đã già nua nhưng ngay lập tức xung phong trợ giúp nghiên cứu.
+//Bước đầu tiên của nghiên cứu, bác nông dân John băn khoăn về số lần mỗi con bò băng ngang qua đường. Bác rất cẩn thận ghi lại dữ liệu về vị trí của những con bò, tạo ra một dãy gồm N quan sát tương ứng với từng ngày. Mỗi quan sát ghi lại số ID của một con bò (một số nguyên nằm trong dãy 1…105), cùng với chiều của con bò so với con đường.
+//Dựa trên dữ liệu của bác John, hãy giúp bác đếm tổng số lượt băng ngang đường. Một lượt băng ngang đường được ghi nhận khi ta có một dãy vị trí của một con bò nào đó, trong đó con bò ở các vị trí khác nhau so với con đường.
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() 
+{
+    int n,dem=0;
+    cin>>n;
+    int vec[n];
+    fill(vec,vec+n,-1);
+    for(int i=0;i<n;i++){
+    int id,k;
+    cin>>id>>k;
+        if(vec[id]==-1) vec[id]=k;  
+        else if(vec[id]!=k)
+        dem++;
+        vec[id]=k;
+    }
+    cout<<dem;
+    return 0;
+}
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() 
+{
+    int n,dem=0;
+    cin>>n;
+    vector<int> id;
+    id.resize(n);
+    vector<int> k;
+    k.resize(n);
+    for(int i=0;i<n;i++){
+        cin>>id[i]>>k[i];
+        for(int j=i-1;j>=0;j--){
+            if(id[j]==id[i]){
+                if(k[j]!=k[i])
+                   dem++;
+                    break;
+            }
+        }
+    }
+    cout<<dem;
+    return 0;
+}

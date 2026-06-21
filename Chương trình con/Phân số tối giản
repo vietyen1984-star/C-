@@ -1,0 +1,21 @@
+//Nhập hai số nguyên dương a và b. Sau đó hiện phân số tối giản của phân số a/b. 
+#include <iostream>
+using namespace std;
+int ucln(int x,int y){
+    while(y>0){
+        int r=x%y;
+        x=y;
+        y=r;
+    }
+    return x;
+}
+int main() 
+{
+    int a,b;
+    cin>>a>>b;
+    int d=ucln(a,b);
+    a=a/d;
+    b=b/d;
+    cout <<a<<"/"<<b;
+    return 0;
+}

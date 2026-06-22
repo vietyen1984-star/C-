@@ -1,0 +1,26 @@
+//Cho số nguyên dương N. Gọi K là số lượng các ước của N. Hãy kiểm tra xem K có phải là số nguyên tố không?
+#include <iostream>
+using namespace std;
+int sum=0;
+bool check(int n){
+    if(n<2) return false;
+    for(int i=2;i<n;i++){
+        if(n%i==0)
+        return false;
+    }
+    return true;
+}
+int main() 
+{
+    int n,dem=0;
+    cin>>n;
+    for(int i=1;i<=n;i++){
+        if(n%i==0)
+        dem++;
+    }
+    if(check(dem)==true)
+    cout<<"YES";
+    else
+    cout<<"NO";
+    return 0;
+}

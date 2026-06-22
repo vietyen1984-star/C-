@@ -1,0 +1,28 @@
+//Biết một số được gọi là số bậc thang nếu biểu diễn thập phân của nó có nhiều hơn một chữ sốđồng thời theo chiều từ trái qua phải, chữ số đứng sau không nhỏ hơn chữ số đứng trước.
+//Ví dụ: 123, 1478, 1269, 1778, … là những số bậc thang, nhưng 8, 132, 1894,... không phải là những số bậc thang.
+#include <bits/stdc++.h>
+using namespace std;
+bool check(int n){
+    int cur=9;
+    int digit=0;
+    while(n>0){
+    digit=n%10;
+    n=n/10;
+    if(cur<digit) return false;
+    if(cur>digit) cur=digit;
+    }
+    return true;
+}
+int main() 
+{
+    int n;
+    cin>>n;
+    vector <int> a;
+    a.resize(n);
+    for(int i=0;i<n;i++){
+    cin>>a[i];
+    if(check(a[i])==true) cout<<"YES"<<endl;
+    else cout<<"NO"<<endl;
+    }
+    return 0;
+}

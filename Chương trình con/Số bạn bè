@@ -1,0 +1,22 @@
+//Một cặp số nguyên dương được gọi là số bạn bè nếu tổng các ước số của số này bằng chính số kia. 
+#include <iostream>
+using namespace std;
+
+int tong_uoc(int x){
+    int sum=0;
+    for(int i=1;i<x;i++){
+        if(x%i==0)
+       sum=sum+i;
+    }
+    return sum;
+}
+int main() 
+{
+    int a,b;
+    cin>>a>>b;
+    if(tong_uoc(a)==b&&tong_uoc(b)==a)
+    cout<<"YES";
+    else
+    cout<<"NO";
+    return 0;
+}

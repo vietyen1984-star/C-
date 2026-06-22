@@ -1,0 +1,29 @@
+//Cho số nguyên dương N. Gọi K là tổng các chữ số của N. Hãy kiểm tra xem K có phải là số nguyên tố không?
+#include <iostream>
+using namespace std;
+int tong_chu_so(int x){
+    int sum=0;
+    while(x>0){
+        sum=sum+x%10;
+        x=x/10;
+    }
+    return sum;
+}
+bool check(int x){
+      if(x<2) return false;
+      for(int i=2;i<x;i++){
+        if(x%i==0) 
+        return false;
+      }
+      return true;
+}
+int main() 
+{
+    int n;
+    cin>>n;
+    int k=tong_chu_so(n);
+    if(check(k)==true)
+    cout<<"YES";
+    else cout<<"NO";
+    return 0;
+}

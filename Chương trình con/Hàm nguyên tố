@@ -1,0 +1,25 @@
+//Ta định nghĩa hàm:	f(x) = tổng các số nguyên tố nhỏ hơn hoặc bằng x.
+#include <iostream>
+using namespace std;
+bool check(int n){
+    if(n<2) return false;
+    for(int i=2;i<n;i++){
+        if(n%i==0)
+        return false;
+    }
+    return true;
+}
+int main() 
+{
+    int n,sum=0;
+    cin>>n;
+    for(int i=1;i<=n;i++){
+        if(check(i)==true)
+        sum=sum+i;
+    }
+    if(check(sum)==true)
+    cout<<"YES";
+    else
+    cout<<"NO";
+    return 0;
+}

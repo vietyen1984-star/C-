@@ -1,0 +1,31 @@
+//Cho hai phân số a/b và c/d, trong đó a, b, c, d là những số nguyên. Hãy tìm phân số tối giản của tổng a/b+c/d.
+#include <iostream>
+using namespace std;
+int phan_so(int a,int b,int c,int d){
+    int tu=a*d+c*b;
+    return tu;
+}
+int mau_so(int b,int d){
+    int mau=b*d;
+    return mau;
+}
+int ucln(int x,int y){
+    while(y>0){
+        int r=x%y;
+        x=y;
+        y=r;
+    }
+    return x;
+}
+int main() 
+{
+    int a,b,c,d;
+    cin>>a>>b>>c>>d;
+    int k=phan_so(a,b,c,d);
+    int n=mau_so(b,d);
+    int m=ucln(k,n);
+    k=k/m;
+    n=n/m;
+    cout<<k<<"/"<<n;
+    return 0;
+}

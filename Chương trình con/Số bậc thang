@@ -5,6 +5,7 @@ using namespace std;
 bool check(int n){
     int cur=9;
     int digit=0;
+    if(n<10) return false;
     while(n>0){
     digit=n%10;
     n=n/10;

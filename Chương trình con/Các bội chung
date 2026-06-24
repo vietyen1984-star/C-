@@ -1,0 +1,20 @@
+//Cho hai số nguyên dương M và N. Hãy tìm tất cả những bội chung của M và N sao cho các bội này đều nhỏ hơn hoặc bằng tích M*N.
+#include <iostream>
+using namespace std;
+int ucln(int x,int y){
+    while(y>0){
+        int r=x%y;
+        x=y;
+        y=r;
+    }
+    return x;
+}
+int main() 
+{
+    int n,m;
+    cin>>n>>m;
+    int bcnn=n*m/ucln(n,m);
+    for(int i=1;i*bcnn<=m*n;i++)
+    cout <<i*bcnn<<" ";
+    return 0;
+}

@@ -1,0 +1,21 @@
+//An xây dựng cho mình một phép nhân như sau: A * B thay vì thực hiện một phép nhân thông thường thì cậu ta lại lấy các chữ số của A nhân với các chữ số của B rồi sau đó cộng các tích đó lại với nhau. 
+//Ví dụ: kết quả của phép nhân 123 * 45 là: 1*4 + 1*5 + 2*4 + 2*5 + 3*4 + 3 * 5 =  54
+//Yêu cầu: cho hai số nguyên dương A và B. Hãy cho biết giá trị của A*B theo phép nhân của bạn An.
+#include <iostream>
+using namespace std;
+int tong_chu_so(int n){
+    int sum=0;
+    while(n!=0){
+        sum=sum+n%10;
+        n=n/10;
+    }
+    return sum;
+}
+int main() 
+{
+    int n,m,tong=0;
+    cin>>n>>m;
+    tong=tong_chu_so(n)*tong_chu_so(m);
+    cout<<tong;
+    return 0;
+}

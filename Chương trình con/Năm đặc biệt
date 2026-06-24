@@ -1,0 +1,26 @@
+//Như bạn đã biết, năm 2013 là năm đầu tiên sau năm 1987 mà tất cả các chữ số của nó đôi một khác nhau.
+//Cho trước một số nguyên n, bây giờ nhiệm vụ của bạn là phải tìm một năm nhỏ nhất mà lớn hơn năm n và các chữ số của nó là đôi một khác nhau.
+#include <bits/stdc++.h>
+using namespace std;
+bool check(int x) { 
+    vector<int> vec;
+    vec.resize(10);
+    while(x>0) {
+        int digit = x%10;
+        vec[digit]++;
+        if(vec[digit]>1) return false;
+        x=x/10;
+    }
+    return true;
+}
+int main() 
+{
+    int n;
+    cin>>n;
+    n=n+1;
+    while(check(n)!=true) {
+        n++;
+    }
+    cout<<n;
+    return 0;
+}

@@ -1,0 +1,28 @@
+//An rất thích những gì có tính thứ tự nên muốn tìm các số nguyên dương mà chữ số ở vị trí chẵn thì là số chẵn còn chữ số ở vị trí lẻ thì là số lẻ. Vị trí số 1 được tính là vị trí đầu tiên ở bên trái sang.
+#include <iostream>
+using namespace std;
+bool check(int x){
+    int sum=0;
+    int dem=0,id=1;
+    while(x>0){
+        sum=sum*10+x%10;
+        x=x/10;
+        }
+    while(sum>0){
+        dem=sum%10;
+        sum=sum/10;
+    if((dem-id)%2!=0){
+    return false;
+    }
+    id++;
+    }
+    return true;
+}
+int main() 
+{
+    int n;
+    cin>>n;
+    if(check(n)==true) cout<<"YES";
+    else cout<<"NO";
+    return 0;
+}

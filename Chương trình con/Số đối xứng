@@ -1,0 +1,22 @@
+//Số đối xứng là số có thể viết từ trái sang phải các chữ số của nó ta vẫn được chính nó. 
+//Từ một số có hai chữ số ta có thể nhận được một số đối xứng theo cách sau: lấy số ban đầu cộng với số ánh xạ gương của nó, tức là số nhận được bằng cách đọc các chữ số từ phải sang trái. Nếu chưa phải là số đối xứng, số đó lại được cộng với ánh xạ gương của nó và tiếp tục như vậy cho đến khi nhận được số đối xứng. Ví dụ, từ số 48 ta có 48+84 = 132, 132+231 = 363. Như vậy 48 tương ứng với 363.
+#include <iostream>
+using namespace std;
+int nguoc(int x){
+    int sum=0;
+    while(x>0){
+        sum=sum*10+x%10;
+        x=x/10;
+    }
+    return sum;
+}
+int main() 
+{
+    int n;
+    cin>>n;
+    while(n!=nguoc(n)){
+        n=n+nguoc(n);
+    }
+    cout<<n;
+    return 0;
+}

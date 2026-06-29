@@ -1,0 +1,30 @@
+//Biết một số được gọi là số bậc thang nếu biểu diễn thập phân của nó có nhiều hơn một chữ số đồng thời theo chiều từ trái qua phải, chữ số đứng sau không nhỏ hơn chữ số đứng trước. 
+//Ví dụ: 123, 1478, 1269, 1778, … là những số bậc thang, nhưng 8, 132, 1894,... không phải là những số bậc thang.
+//Nhập vào một mảng gồm n (n ≤ 1000) số dương a1, a2, …, an (ai ≤ 109).
+//Hãy đếm xem trong mảng có bao nhiêu số bậc thang.
+#include <iostream>
+using namespace std;
+bool check(int n){
+    int sum=0,ans=9;
+    if(n<10) return false;
+    while(n>0){
+        sum=n%10;
+        n=n/10;
+        if(ans>=sum) ans=sum;
+        else
+        return false;
+    }
+    return true;
+}
+int main() 
+{
+    int n,dem=0;
+    cin>>n;
+    for(int i=1;i<=n;i++){
+    int x;
+    cin>>x;
+    if(check(x)==true) dem++;
+    }
+    cout<<dem;
+    return 0;
+}

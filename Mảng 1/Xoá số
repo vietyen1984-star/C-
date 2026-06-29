@@ -1,0 +1,20 @@
+//Cho dãy n số nguyên không âm A1, A2, ... , An. Người ta muốn chọn 2 chỉ số i, j sao cho 1<=i<=j<=N và xoá khỏi dãy 2 số Ai, Aj để tổng giá trị các số còn lại trong dãy là số chẵn.
+//Yêu cầu: Hãy đếm số lượng cách chọn 2 chỉ số i, j thoả mãn. Hai cách chọn khác nhau nếu tồn tại một chỉ số khác nhau.
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() 
+{
+    int n,even=0,odd=0;
+    cin>>n;
+    vector<int> vec;
+    vec.resize(n+1);
+    for(int i=1;i<=n;i++){
+    cin>>vec[i];
+    if(vec[i]%2==0) even++;
+    else odd++;
+    }
+    if(odd%2!=0) cout<<even*odd;
+    else cout<<even*(even+1)/2+odd*(odd+1)/2;
+    return 0;
+}

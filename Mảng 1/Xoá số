@@ -15,6 +15,6 @@ int main()
     else odd++;
     }
     if(odd%2!=0) cout<<even*odd;
-    else cout<<even*(even+1)/2+odd*(odd+1)/2;
+    else cout<<even*(even-1)/2+odd*(odd-1)/2;
     return 0;
 }

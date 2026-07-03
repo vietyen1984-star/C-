@@ -1,0 +1,19 @@
+//Cho {x1, x2, ..., xn} là một hoán vị của {1,2,...,n}. Ta gọi nghịch thế là một cặp (i,j) với i < j nhưng xi > xj. Hãy lập mảng nghịch thế (p1, p2, ..., pn) trong đó pi là số nghịch thế có điểm cuối bằng xi (nói cách khác pi là số lượng các phần tử lớn hơn xi nhưng lại đứng trước xi)
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() 
+{
+    int n;
+    cin>>n;
+    vector<int> vec;
+    vec.resize(n+1);
+    for(int i=1;i<=n;i++) cin>>vec[i];
+    for(int i=1;i<=n;i++){
+        int sum=0;
+        for(int j=1;j<i;j++)
+        if(vec[i]<vec[j]) sum++;
+        cout<<sum<<" ";
+    }
+    return 0;
+}

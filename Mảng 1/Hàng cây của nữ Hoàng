@@ -1,0 +1,32 @@
+//Bài 10. Hàng cây của nữ Hoàng			Tên file: TREE.CPP
+//Nữ Hoàng ở vương quốc Alpha có N cây trong vườn. Cây thứ i có chiều cao là Ai milimet.
+//Hôm nay, nữ hoàng muốn cải tạo lại khu vườn của mình, bà muốn chiều cao các cây phải thỏa mãn rằng: với mọi i (1 <= i < n) thì ai+1 – ai = k, trong đó k là một số cho trước.  
+//Người làm vườn của nữ hoàng có khả năng đặc biệt, có thể thay đổi chiều cao của các cây tùy ý tăng hoặc giảm. Tuy nhiên, ông lại không biết là nên chọn những cây nào để thay đổi sao cho số cây cần thay đổi tối thiểu. 
+//Bạn hãy giúp người làm vườn của nữ hoàng đáp ứng được yêu cầu của bà với số lần thay đổi chiều cao của cây là ít nhất.
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() 
+{
+    int n,k,dem=0;
+    cin>>n>>k;
+    vector<int> vec;
+    vec.resize(n+1);
+    for(int i=1;i<=n;i++)
+    cin>>vec[i];
+    for(int i=1;i<n;i++)
+        if (vec[i]-vec[i+1]!=-k) dem++;
+    cout<<dem<<endl;
+    for(int i=1;i<n;i++){
+        int sum=0;
+        if(vec[i+1]-vec[i]<k){ sum=k-(vec[i+1]-vec[i]);
+        vec[i+1]=vec[i+1]+sum;
+        cout<<"+"<<" "<<i+1<<" "<<abs(sum)<<endl;
+        }
+        if(vec[i+1]-vec[i]>k){ sum=vec[i+1]-vec[i]-k;
+        vec[i+1]=vec[i+1]-sum;
+        cout<<"-"<<" "<< i+1<<" "<<abs(sum)<<endl;
+        }
+    }
+    return 0;
+}

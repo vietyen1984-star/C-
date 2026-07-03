@@ -1,0 +1,20 @@
+//Giải bài toán ngược của bài "nghịch thế 1": biết mảng (p1, p2..., pn), hãy tìm hoán vị (x1, x2, ..., xn).
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() 
+{
+    int n;
+    cin>>n;
+    vector<int> vec(n+1);
+    for(int i=1;i<=n;i++) cin>>vec[i];
+    vector<int> ans(n+1),tmp(n+1);
+    for(int i=n;i>=1;i--) {
+        int id = n;
+        while(vec[id]!=tmp[id]) id--;
+        ans[id]=i;
+        for(;id<=n;id++) tmp[j]++; 
+    }
+    for(int i=1;i<=n;i++) cout<<ans[i]<<" ";
+    return 0;
+}

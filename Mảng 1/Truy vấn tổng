@@ -1,0 +1,23 @@
+//Cho một dãy số nguyên gồm N phần tử nguyên A1, A2, …, AN.
+//Yêu cầu: Hãy trả lời Q truy vấn có dạng:
+//- i j: tính tổng các phần tử liên tiếp thuộc đoạn từ i đến j.
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() 
+{
+    int n,q;
+    cin>>n>>q;
+    vector<int> vec;
+    vec.resize(n+1);
+    for(int k=1;k<=n;k++) cin>>vec[k];
+    for(int k=1;k<=q;k++){
+    int i,j;
+    cin>>i>>j;
+    int sum=0;
+    for(int k=i;k<=j;k++)
+    sum=sum+vec[k];
+    cout<<sum<<" ";
+    }
+    return 0;
+}

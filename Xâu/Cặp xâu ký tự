@@ -1,0 +1,16 @@
+//Bài toán đặt ra là cho trước các cặp xâu ký tự, đều chỉ bao gồm các chữ cái viết thường, hay xác định xem mỗi cặp xâu có được tạo ra từ cùng một bộ ký tự giống nhau hay không.   
+//Chú ý: các ký tự lặp cũng phải được xem xét. Ví dụ: “abc”và “aabbbcccc” không được xem là tạo nên bởi cùng một bộ ký tự vì xâu thứ 2 các chữ cái được lặp lại nhiều lần hơn.
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() 
+{
+    string s1,s2;
+    while(cin>>s1>>s2){
+        sort(s1.begin(),s1.end());
+        sort(s2.begin(),s2.end());
+        if (s1==s2) cout<<"SAME"<<endl;
+        else cout<<"DIFFERENT"<<endl;
+    }
+    return 0;
+}

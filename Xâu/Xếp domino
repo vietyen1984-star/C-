@@ -1,0 +1,22 @@
+//Alice có một lưới với 2 hàng và n cột. Cô ấy che hoàn toàn lưới bằng cách sử dụng n quân domino có kích thước 1 × 2 - Alice có thể đặt chúng theo chiều dọc hoặc chiều ngang, và mỗi ô phải được bao phủ bởi duy nhất một quân domino.
+//Bây giờ, cô ấy quyết định hiển thị một hàng của lưới cho Bob. Giúp Bob và tìm ra hàng còn lại của lưới trông như thế nào!
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() 
+{
+    int t;
+    cin>>t;
+    while(t--) {
+        int n;
+        string s;
+        cin>>n>>s;
+        for(int i=0;i<n;i++) {
+            if(s[i]=='U') cout<<"D";
+            else if(s[i]=='D') cout<<"U";
+            else cout<<s[i];
+        }
+        cout<<endl;
+    }
+    return 0;
+}

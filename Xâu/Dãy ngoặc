@@ -1,0 +1,29 @@
+//Người ta định nghĩa một dãy ngoặc đúng theo đệ quy như sau:
+//- Xâu A là xâu rỗng là một dãy ngoặc đúng
+//- Nếu xâu A là dãy ngoặc đúng thì (A) cũng là dãy ngoặc đúng
+//- Nếu xâu A và xâu B là dãy ngoặc đúng thì AB cũng là dãy ngoặc đúng.
+//Còn những xâu chứa những ký tự khác "(" và ")" được gọi là xâu không hợp lệ.
+//Ví dụ:
+//S = "(A()B)" là dãy "KHONG HOP LE" vì chứa chữ cái A và B
+//S = "()()(())" là dãy ngoặc "DUNG"
+//S = "()())" là dãy ngoặc "KHONG DUNG"
+//Cho xâu S. Hãy kiểm tra xâu S là dãy ngoặc "DUNG", "KHONG DUNG" hay là xâu "KHONG HOP LE"
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() 
+{
+    string s;
+    int sum=0;
+    cin>>s;
+    if (s=="A"||s=="B") {
+    cout<<"KHONG HOP LE";
+    return 0;
+    }
+    for(int i=0;i<s.size();i++)
+    if(s[i]=='(') sum=sum+1;
+    else if (s[i]==')') sum=sum-1;
+    if(sum==0) cout<<"DUNG";
+    else cout<<"KHONG DUNG";
+    return 0;
+}

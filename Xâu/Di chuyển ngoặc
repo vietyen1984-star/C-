@@ -1,0 +1,28 @@
+//Bạn cho trước một dãy ngoặc độ dài n, trong đó n là chẵn gồm n/2 ký tự mở ngoặc và n/2 ký tự đóng ngoặc.
+//Trong một lần di chuyển, bạn có thể chọn chính xác một dấu ngoặc và di chuyển nó đến đầu chuỗi hoặc đến cuối chuỗi (tức là bạn chọn một số vị trí i, loại bỏ ký tự thứ i của s và chèn nó vào trước hoặc sau khi tất cả ký tự còn lại của s).
+//Nhiệm vụ của bạn là tìm số lần di chuyển tối thiểu cần thiết để có được chuỗi dấu ngoặc đúng từ s. Có thể chứng minh rằng câu trả lời luôn tồn tại dưới các ràng buộc đã cho.
+//Nhắc lại chuỗi dấu ngoặc đúng là:
+//-	"()" là chuỗi dấu ngoặc đúng;
+//-	nếu s là chuỗi ngoặc đúng thì "(" + s + ")" là chuỗi ngoặc đúng;
+//-	nếu s và t là chuỗi ngoặc đúng thì s + t là chuỗi ngoặc đúng.
+//Ví dụ: "() ()", "(()) ()", "(())" và "()" là các chuỗi dấu ngoặc đúng, nhưng ") (", "() (" và ")) )" không.
+#include <iostream>
+using namespace std;
+
+int main() 
+{
+    int t;
+    cin>>t;
+     while(t--) {
+        int sum=0;
+        int n;
+        string s;
+        cin>>n>>s;
+        for(int i=0;i<s.size();i++){
+            if(s[i]=='(') sum++;
+            else if(s[i]==')'&&sum>0) sum--;
+        }
+    cout<<sum<<endl;
+     }
+    return 0;
+}

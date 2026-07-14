@@ -1,0 +1,29 @@
+//Vì không có bố mẹ từ bé nên hằng ngày ngoài thời gian đến trường Chí phải đi chăn bò thuê kiếm tiền. Vào một ngày nọ, Chí  đã gặp một dòng văn bản hấp dẫn được khắc vào một tảng đá lớn ở giữa vùng chăn thả bò yêu thích của mình. Ý nghĩa của dòng văn bản dường như là từ một ngôn ngữ cổ xưa bí ẩn liên quan đến một bảng chữ cái chỉ gồm ba ký tự C, O, và W. Mặc dù Chí không thể giải mã văn bản nhưng COW là mẫu từ yêu thích của Chí, và cậu tự hỏi có bao nhiêu lần COW xuất hiện trong dòng văn bản.
+//Chí không phiền lòng nếu có những kí tự khác xen kẽ trong COW, miễn rằng các kí tự xuất hiện theo thứ tự đúng là C, O, W. Chí cũng không ngại nếu các lần xuất hiện khác nhau của COW có chung một số chữ cái. Ví dụ, COW xuất hiện một lần trong CWOW, hai lần trong CCOW, và tám lần trong CCOOWW.
+//Em hãy vui lòng giúp Chí đếm xem có bao nhiêu lần COW xuất hiện trong dòng văn bản đã gặp.
+#include <bits/stdc++.h>
+using namespace std;
+
+int main(){
+    int n;
+    cin>>n;
+    string s;
+    cin>>s;
+    int ans=0,tmp=0,sum=0;
+    vector<int> c,w;
+    c.resize(10000);
+    w.resize(10000);
+    for(int x=0;x<s.size();x++) {
+        if(s[x]=='c') tmp++;
+        c[x]=tmp;
+    }
+    for(int x=s.size()-1;x>=0;x--) {
+        if(s[x]=='w') sum++;
+        w[x]=sum;
+    }
+    for(int x=0;x<s.size();x++){
+        if(s[x]=='o') ans=ans+c[x]*w[x];
+    }
+    cout<<ans;
+    return 0;
+}

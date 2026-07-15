@@ -1,0 +1,21 @@
+//Khi bạn cố gắng gửi một tệp trong mạng xã hội "Codehorses", bạn đã gặp phải một sự cố không mong muốn. Nếu tên của tệp chứa ba hoặc nhiều hơn "x" (chữ cái Latinh viết thường "x") liên tiếp, hệ thống cho rằng nội dung tệp không tương ứng với chủ đề mạng xã hội. Trong trường hợp này, tệp không được gửi và thông báo lỗi được hiển thị.
+//Xác định số ký tự tối thiểu để loại bỏ khỏi tên tệp để sau đó tên không chứa "xxx" như một chuỗi con. In ra 0 nếu tên tệp ban đầu không chứa chuỗi con bị cấm "xxx".
+//Bạn có thể xóa các ký tự ở các vị trí tùy ý (không nhất thiết phải liên tiếp). Nếu bạn xóa một ký tự, thì độ dài của chuỗi sẽ giảm đi 1. Ví dụ: nếu bạn xóa ký tự ở vị trí 2 khỏi chuỗi "exxxii", thì chuỗi kết quả là "exxii".
+#include <iostream>
+using namespace std;
+
+int main() 
+{
+    int n;
+    cin>>n;
+    string s;
+    cin>>s;
+    int temp=0,ans=0;
+    for(auto i=0;i<s.size();i++){
+        if(s[i]=='x') temp++;
+        else if(s[i]!='x') temp=0;
+        if(temp>2) ans++;
+    }
+    cout<<ans;
+    return 0;
+}

@@ -1,0 +1,20 @@
+//Hai xâu ký tự được gọi là đảo của nhau nếu ta có thể hoán vị các ký tự của xâu để được xâu còn lại. Ví dụ: xâu “occurs” là đảo của xâu “succor”, tuy nhiên “dear” không phải là đảo của xâu “daerd” (vì chữ “d” xuất hiện 2 lần trong “deard” còn “dear” thì chỉ xuất hiện 1 lần).
+//Độ đo giữa 2 xâu ký tự là số ký tự ít nhất cần phải xóa (trên cả 2 xâu) để 2 xâu còn lại là đảo của nhau. Ví dụ: độ đo giữa hai xâu “sleep” và “leap” là 3, độ đo giữa hai xâu “dog” và “cat” là 6.
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() 
+{
+    string s1,s2;
+    cin>>s1>>s2;
+    vector<int> vec1,vec2;
+    vec1.resize(30);
+    vec2.resize(30);
+    for(auto x:s1) vec1[x-'a']++;
+    for(auto x:s2) vec2[x-'a']++;
+    int ans=0;
+    for(int i=0;i<=26;i++)
+    ans=ans+abs(vec1[i]-vec2[i]);
+    cout<<ans;
+    return 0;
+}

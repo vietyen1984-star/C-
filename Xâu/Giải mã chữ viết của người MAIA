@@ -1,0 +1,23 @@
+//Công việc giải mã chữ viết của người MAIA là khó khăn hơn người ta tưởng nhiều. Trải qua hơn 200 năm mà người ta vẫn hiểu rất ít về các chữ viết này. Chỉ trong 3 thập niên gần đây do công nghệ phát triển việc giải mã này mới có nhiều tiến bộ.
+//Chữ viết Maia dựa trên các ký hiệu nhỏ gọi là nét vẽ, mỗi nét vẽ tương ứng với một âm giọng nói. Mỗi từ trong chữ viết Maia sẽ bao gồm một tập hợp các nét vẽ như vậy kết hợp lại với nhiều kiểu dáng khác nhau. Mỗi nét vẽ có thể hiểu là một ký tự ta hiểu ngày nay.
+//Một trong những vấn đề lớn khi giải mã chữ Maia là thứ tự đọc các nét vẽ. Do người Maia trình bày các nét vẽ này không theo thứ tự phát âm, mà theo cách thể hiện của chúng. Do vậy nhiều khi đã biết hết các nét vẽ của một từ rồi nhưng vẫn không thể tìm ra được chính xác cách ghi và đọc của từ này.
+//Các nhà khảo cổ đang đi tìm kiếm một từ đặc biệt W. Họ đã biết rõ tất cả các nét vẽ của từ này nhưng vẫn chưa biết các cách viết ra của từ này. Vì họ biết có các thí sinh IOI'06 sẽ đến nên muốn sự trợ giúp của các sinh viên này. Họ sẽ đưa ra toàn bộ g nét vẽ của từ W và dãy S tất cả các nét vẽ có trong hang đá cổ. Bạn hãy giúp các nhà khảo cổ tính xem có bao nhiêu khả năng xuất hiện từ W trong hang đá.
+//Yêu cầu: Hãy viết chương trình, cho trước các ký tự của từ W và dãy S các nét vẽ trong hang đá, tính tổng số khả năng xuất hiện của từ W trong dãy S, nghĩa là số lần xuất hiện một hoán vị các ký tự của dãy g ký tự trong S.
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() 
+{
+    int n,m,ans=0;
+    cin>>n>>m;
+    string s1,s2;
+    cin>>s1>>s2;
+    sort(s1.begin(),s1.end());
+    for(int i=0;i<s2.size();i++){
+    string s3=s2.substr(i,n);
+    sort(s3.begin(),s3.end());
+    if(s1==s3) ans++; 
+    }
+    cout<<ans;
+    return 0;
+}

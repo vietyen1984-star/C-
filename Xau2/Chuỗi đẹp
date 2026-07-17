@@ -1,0 +1,26 @@
+//Một chuỗi ký tự s chỉ gồm các chữ cái 'a' và 'b' được gọi là một chuỗi đẹp nếu số lượng các chữ cái 'a' và 'b' trong s là khác nhau. 
+//Ví dụ: các chuỗi 'a', 'aba', 'bbbb' là chuỗi đẹp, còn các chuỗi 'ab', 'abba' thì không phải.
+//Cho một chuỗi ký tự s chỉ gồm các chữ cái 'a' và 'b'. Hãy tìm cách cắt chuỗi s thành một số ít nhất các chuỗi con là chuỗi đẹp.  
+//Ví dụ, một cách cắt chuỗi s = 'aabbab' thành 2 chuỗi 'aab' và 'bab' là cách cắt hợp lệ; còn cách cắt s thành 2 chuỗi 'aabb' và 'ab' thì không hợp lệ vì hai chuỗi con không phải là chuỗi đẹp. Ngoài ra, cách cắt s thành 3 chuỗi 'a', 'a', 'bbab' là hợp lệ nhưng không phải đáp án, vì cách cắt này tạo ra 3 chuỗi con, không phải là cách cắt tối thiểu, mặc dù cả 3 chuỗi con này đều là chuỗi đẹp.
+//Biết rằng lời giải luôn tồn tại. Em hãy cho biết có thể cắt chuỗi s thành ít nhất bao nhiêu chuỗi con là chuỗi đẹp. 
+#include <iostream>
+using namespace std;
+
+int main() 
+{
+    int t;
+    cin>>t;
+    while(t--){
+        string s;
+        cin>>s;
+        int tmp=0,ans=0;
+        for(int i=0;i<s.size();i++){
+            if(s[i]=='a') tmp++;
+            if(s[i]=='b') ans++;
+        }
+        if(ans>tmp||tmp>ans) cout<<"1\n";
+        else cout<<"2\n";
+    
+    }
+    return 0;
+}

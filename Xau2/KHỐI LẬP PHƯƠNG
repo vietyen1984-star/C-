@@ -1,0 +1,23 @@
+//Jim là một chú bé, bình thường như bao chú bé khác. Jim còn rất bé nên chưa biết đếm. Một hôm, bố mẹ mang về cho chú bộ đồ chơi là các khối hộp kích thước 2×1×1 có in chữ cái trên các mặt của khối lập phương đơn vị. Jim còn quá bé, bố mẹ không muốn làm chú rối trí nên chỉ chọn các khối hộp chỉ ghi 2 chữ cái đầu tiên là A và B.
+//Chú rất khoái chí và bắt đầu chơi, nhưng chơi không thật đúng cách: bẻ một số khối thành các hình lập phương để xếp nhà, sau đó, chú không thích các khối lập phương có chữ B và làm mất tất cả các khối này. Như vậy chú chỉ còn các khối hộp có ghi AB hoặc BA và một số khối lập phương có ghi chữ A. Lúc bố mẹ đi vắng cậu tìm được lọ keo dán. Là một cậu bé sáng ý, Jim nhanh chóng hiểu được tác dụng của vật này và dán các khối hộp  cùng các khối lập phương thành các băng, băng thứ i có kích thước 1×1×mi.
+//Khi bố mẹ về nhà Jim tự hào khoe kết quả lao động của mình. Qua mô tả rắm rối của Jim bố mẹ hiểu rằng Jim đã dán được n băng, băng thứ i biểu diễn xâu si (chỉ chứa các ký tự A và B). Bố mẹ Jim muốn biết mình đã hiểu đúng những gì Jim mô tả hay chưa, cụ thể là liệu có tạo được xâu si từ những gì mà Jim có hay không.
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() 
+{
+    int t;
+    cin>>t;
+    while(t--){
+        string s;
+        cin>>s;
+        int temp=0;
+        for(int i=0;i<s.size();i++){
+            if(s[i]=='A') temp--;
+            if(s[i]=='B') temp++;
+        }
+        if(temp>0) cout<<"NO"<<endl;
+        else cout<<"YES"<<endl;
+    }
+    return 0;
+}

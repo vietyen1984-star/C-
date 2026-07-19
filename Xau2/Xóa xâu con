@@ -1,0 +1,25 @@
+//Zookeeper đang chơi một trò chơi. Trong trò chơi này, Zookeeper được cho một chuỗi bao gồm các chữ cái 'A' và 'B'. Anh ta có thể thực hiện xóa một chuỗi con là "AB" hoặc "BB". Khi anh ta xóa một chuỗi con như vậy, các phần còn lại của chuỗi được ghép lại với nhau.
+//Ví dụ, Zookeeper có thể sử dụng hai hoạt động như vậy: "AABABBA" → "AABBA" → "AAA".
+//Zookeeper tự hỏi chuỗi ngắn nhất mà anh ta có thể tạo ra là gì. Bạn có thể giúp anh ta tìm độ dài của chuỗi ngắn nhất?
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() 
+{
+    int t;
+    cin>>t;
+    while(t--){
+    string s;
+    cin>>s;
+    int temp=0;
+    for(int i=0;i<s.size();i++){
+        if(s[i]=='B') {
+            if(temp>0) temp--;
+            else temp++;
+        }
+        else if(s[i]=='A') temp++;
+    }
+    cout<<temp<<endl;
+    }
+    return 0;
+}

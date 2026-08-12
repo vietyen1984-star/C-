@@ -1,5 +1,5 @@
 //Vào một buổi sáng nông dân John sắp một đàn bò gồm n con bò để vắt sữa. Ông dự kiến là vào sáng hôm đó, con bò thứ i có khả năng sẽ vắt được ai lít sữa. Tuy nhiên đàn bò của ông có đặc điểm là cứ mỗi lần vắt sữa một con, những con còn lại trông thấy sợ quá nên sẽ bị giảm sản lượng mỗi con 01 lít sữa. Nếu vắt sữa con bò thứ nhất, n-1 con còn lại bị giảm sản lượng. Sau đó vắt sữa con bò thứ hai thì n-2 con còn lại bị giảm sản lượng....
-Bạn hãy giúp nông dân John tính xem thứ tự vắt sữa bò như thế nào để số lượng sữa vắt được là nhiều nhất nhé.
+//Bạn hãy giúp nông dân John tính xem thứ tự vắt sữa bò như thế nào để số lượng sữa vắt được là nhiều nhất nhé.
 #include <bits/stdc++.h>
 using namespace std;
 

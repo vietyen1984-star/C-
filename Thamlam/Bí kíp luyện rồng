@@ -1,4 +1,4 @@
-Sau khi không còn gì để đố 2 thằng em của mình nữa Tý quay ra chơi điện tử. Tý rất mê trò chơi điều khiển nhân vật Hiccup của mình chiến đấu cùng với những con rồng, vượt qua tất cả sẽ nhận được chứng chỉ dũng sĩ dragon. Hiccup chỉ có thể vượt qua 1 con rồng nếu như chỉ số chiến đấu của cậu lớn hơn chỉ số chiến đấu của con rồng đó, và sau khi giành chiến thắng chỉ số chiến đấu của cậu sẽ tăng thêm một mức nhất định tùy vào con rồng mà cậu đánh bại.
+//Sau khi không còn gì để đố 2 thằng em của mình nữa Tý quay ra chơi điện tử. Tý rất mê trò chơi điều khiển nhân vật Hiccup của mình chiến đấu cùng với những con rồng, vượt qua tất cả sẽ nhận được chứng chỉ dũng sĩ dragon. Hiccup chỉ có thể vượt qua 1 con rồng nếu như chỉ số chiến đấu của cậu lớn hơn chỉ số chiến đấu của con rồng đó, và sau khi giành chiến thắng chỉ số chiến đấu của cậu sẽ tăng thêm một mức nhất định tùy vào con rồng mà cậu đánh bại.
 Tý muốn biết liệu Hiccup có thể nhận được chứng chỉ không? Bạn hãy giúp Tý với.
 #include <bits/stdc++.h>
 using namespace std;

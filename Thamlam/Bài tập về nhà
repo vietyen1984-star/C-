@@ -1,0 +1,24 @@
+//Bạn An được thầy giáo giao cho N bài tập về nhà, mỗi bài tập có mức độ khó khác nhau được đánh giá bởi giá trị a[i]. 
+//Để làm được bài tập thứ i thì bạn An cần phải có kỹ năng lớn hơn hoặc bằng mức độ khó a[i]. Mỗi khi làm được bài độ khó là a[i] thì kỹ năng giải bài của cậu được tăng thêm một lượng là a[i]. Ban đầu kỹ năng làm bài của bạn An là S.
+//Hãy cho biết bạn An có thể làm được tối đa bao nhiêu bài tập.
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() 
+{
+    int n,s;
+    cin>>n>>s;
+    int sum=s,tmp=0;
+    vector<int> a;
+    a.resize(n+1);
+    for(int i=1;i<=n;i++)
+    cin>>a[i];
+    sort(a.begin(),a.end());
+    for(int i=1;i<=n;i++){
+    if(a[i]<=sum){ sum=sum+a[i];
+    tmp++;
+        }
+    }
+    cout<<tmp;
+    return 0;
+}

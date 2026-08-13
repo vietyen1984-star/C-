@@ -1,0 +1,18 @@
+//Sau buổi học, có n nhóm bạn rủ nhau đến chúc mừng sinh nhật An. Nhóm bạn thứ i có ai người (1 ≤ ai ≤ 4). Họ quyết định gọi những chiếc xe taxi để đi. Những chiếc taxi chỉ chở tối đa được 4 khách mà thôi.
+//Hãy cho biết các nhóm bạn này cần gọi tối thiểu bao nhiêu chiếc taxi, biết rằng những người trong cùng một nhóm luôn đi cùng trên một chiếc taxi, và một chiếc taxi có thể chở nhiều nhóm khác nhau.
+    #include <bits/stdc++.h>
+    using namespace std;
+
+    int main() 
+    {
+        int n,sum=0;
+        cin>>n;
+        vector<int> a;
+        a.resize(n+1);
+        for(int i=1;i<=n;i++) cin>>a[i];
+        for(int i=1;i<=n;i++){
+            sum=sum+a[i]; 
+        }
+        cout<<(sum-1)/4+1;
+        return 0;
+    }

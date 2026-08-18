@@ -1,0 +1,27 @@
+//Trong nhà Nam hiện đang có n ổ cắm điện rời. Số lượng chỗ cắm trên mỗi ổ cắm điện này lần lượt là a1, a2, a3,…, an  chỗ cắm. Trên tường nhà Nam có một chỗ cắm cố định đang có điện. Vậy để cho một ổ cắm điện rời có điện thì phải cắm ổ cắm đó vào chỗ cắm cố định trên tường. Chúng ta cũng có thể cắm ổ cắm điện rời này vào một ổ cắm điện rời khác đang có điện.
+//Nam có m thiết bị sử dụng điện, để sử dụng thì các thiết bị này cần được cắm vào ổ cắm trên tường hoặc ổ cắm rời đang có điện. 
+//Bạn hãy giúp Nam tìm ra số ổ cắm rời ít nhất cần dùng để có thể sử dụng tất cả m thiết bị điện này.
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() 
+{
+    int n,m,tmp=1;
+    cin>>n>>m;
+    vector<int> a;
+    a.resize(n);
+    for(int i=0;i<n;i++) cin>>a[i];
+    if(m<=1){ cout<<0; return 0;
+    }
+    sort(a.begin(),a.end(),greater<int>());
+    int sum=a[1];
+    for(int i=1;i<n-1;i++){
+        sum=sum+a[i]-1;
+        tmp++;
+        if(sum>=m){
+    cout<<tmp; return 0;
+    }
+    }
+    if(tmp<m) cout<<-1;
+    return 0;
+}

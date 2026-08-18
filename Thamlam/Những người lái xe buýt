@@ -1,0 +1,23 @@
+//Trong một thành phố có n tài xế xe buýt. Ngoài ra còn có n tuyến xe buýt ban ngày và các tuyến xe buýt ban tối với chiều dài khác nhau. Mỗi tài xế được chỉ định một tuyến đường ban ngày và một tuyến đường ban tối. Đối với bất kỳ tài xế nào, nếu tổng chiều dài tuyến của anh ta vượt quá d giờ, anh ta phải được trả lương làm thêm giờ cho mỗi giờ sau d giờ đầu tiên với một giờ r đồng / giờ. 
+//Nhiệm vụ của bạn là chỉ định một tuyến đường ban ngày và một tuyến đường ban tối cho mỗi tài xế xe buýt để tổng số tiền làm thêm giờ mà công ty phải trả cho họ càng nhỏ càng tốt.
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() 
+{
+    int n,d,r;
+    while (cin >> n >> d >> r && n != 0 || d != 0 || r != 0){
+    int ans=0;
+    vector<int> a,b;
+    a.resize(n+1);
+    b.resize(n+1);
+    for(int i=0;i<n;i++) cin>>a[i]>>b[i];
+    for(int i=0;i<n;i++){
+        if(a[i]+b[i]>d){
+        ans=ans+a[i]+b[i]-d;}
+    }
+     cout<<ans*r<<endl;
+    }
+    
+    return 0;
+}

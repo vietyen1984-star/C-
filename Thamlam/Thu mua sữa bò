@@ -1,0 +1,32 @@
+//Một nhà máy chế biến sữa cần mua hàng ngày N lít sữa của M nông dân. Mỗi nông dân có thể cung cấp một lượng sữa và đưa ra giá bán sữa khác nhau. 
+//Hãy tìm cách mua sữa sao cho đủ số lượng sữa cần cho hàng ngày với số tiền bỏ ra là ít nhất. Biết rằng tổng lượng sữa của các nông dân luôn đủ cung cấp cho nhà máy.
+#include <bits/stdc++.h>
+using namespace std;
+
+struct Milk {
+    int amount, price;
+};
+
+bool cmp(Milk a, Milk b){
+    return a.price < b.price;
+}
+int main() 
+{
+    int n,k;
+    cin>>n>>k;
+    vector<Milk> vec;
+    vec.resize(n);
+    for(int i=0;i<k;i++) {
+        cin>>vec[i].price>>vec[i].amount;
+    }
+    sort(vec.begin(),vec.end(),cmp);
+    int idx = 0;
+    int ans = 0;
+    while(n-vec[idx].amount>=0) {
+        n-=vec[idx].amount;
+        ans += vec[idx].amount * vec[idx].price;
+        idx++;
+    }
+    cout<<ans + vec[idx].price * n;
+    return 0;
+}

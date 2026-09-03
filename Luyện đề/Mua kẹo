@@ -1,0 +1,17 @@
+#incluDe <bits/stdc++.h>
+using namespace std;
+
+int main() 
+{
+    int n,ans=0;
+    cin>>n;
+    int m=n;
+    for(int i=1;i<=m;i++){
+        if(n>i){ ans=ans+i*i;
+        n=n-i;
+        }
+        else {ans =ans +n*i;
+        cout<<ans; return 0; }
+    }
+    return 0;
+}
